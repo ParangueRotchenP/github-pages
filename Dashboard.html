@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athena Vanguard Academy</title>
+  <link rel="stylesheet" href="Dashboard.css">
+  <!-- Favicon (Logo for browser tab) -->
+  <link rel="icon" href="/images/LOGO.png" type="image/png">
+</head>
+<body>
+  <!-- Header Section with Border -->
+  <header>
+    <div class="Container1">
+      <img src="/images/LOGO.png" alt="Logo" class="logo">
+      <div class="header-content">
+        <h1 class="header">Athena Vanguard Academy</h1>
+        <p class="Leading"><em>“Avanians: Shaping the Future, Leading with Confidence."</em></p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Center Section with the Picture and Links -->
+  <div class="center-section">
+    <div class="image-container">
+      <!-- Radio buttons to switch images (hidden) -->
+      <input type="radio" name="image" id="image1" class="image-radio" checked>
+      <input type="radio" name="image" id="image2" class="image-radio">
+
+      <div class="slider">
+        <div class="image-slide image1"></div>
+        <div class="image-slide image2"></div>
+      </div>
+
+      <!-- Buttons positioned at the top of the image -->
+      <div class="links">
+        <a href="Home.html">HOME</a>
+        <a href="Gallery.html">GALLERY</a>
+        <a href="about-Us.html">ABOUT US</a>
+        <a href="Apply.html">APPLY NOW!</a>
+      </div>
+
+      <!-- Welcome Text (Center-left) -->
+      <div class="welcome-text">
+        <h2><em>WELCOME</em></h2>
+        <h3><em>AVANIAN!</em></h3>
+      </div>
+
+      <!-- Right Arrow button (for changing images) -->
+      <div class="arrow-right" id="right-arrow">
+        →
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <!-- Left Side: Facebook & Instagram -->
+      <div class="footer-left">
+        <div class="social-item">
+          <img src="/images/facebook-logo.png" alt="Facebook Logo" class="social-logo">
+          <span>Athena Vanguard Academy</span>
+        </div>
+        <div class="social-item">
+          <img src="/images/instagram-logo.png" alt="Instagram Logo" class="social-logo">
+          <span>AVAofficial</span>
+        </div>
+      </div>
+
+      <!-- Center: Copyright -->
+      <div class="footer-center">
+        <div class="social-item">
+          <img src="/images/Gmail.png" alt="Gmail Logo" class="social-logo">
+          <span>AthenaVanguardAcademy@ava.edu.ph</span>
+      </div>
+        <span class="Copy">&#169; 2025 Athena Vanguard Academy</span>
+      </div>
+
+      <!-- Right Side: Telephone & Location -->
+      <div class="footer-right">
+        <div class="social-item">
+          <img src="/images/telephone-logo.png" alt="Telephone Logo" class="social-logo">
+          <span>09271356589</span>
+        </div>
+        <div class="social-item">
+          <img src="/images/location.png" alt="Location Logo" class="social-logo">
+          <span>Santa Maria, Bulacan</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript to control the image switching and loop behavior -->
+  <script>
+    const rightArrow = document.getElementById('right-arrow');
+    const image1 = document.getElementById('image1');
+    const image2 = document.getElementById('image2');
+
+    rightArrow.addEventListener('click', () => {
+      if (image1.checked) {
+        image2.checked = true;  // Switch to image2
+      } else {
+        image1.checked = true;  // Switch back to image1
+      }
+    });
+  </script>
+</body>
+</html>

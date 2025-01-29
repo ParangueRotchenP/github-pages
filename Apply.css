@@ -1,0 +1,263 @@
+/* General Styles */
+body { 
+    background-color: #b5a8db;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh; /* Ensure the body fills the entire viewport */
+}
+
+/* Header Section */
+header {
+    width: 100%;
+    background-color: #281756;
+    border-bottom: 2px solid #000;
+}
+
+.Container1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    flex-wrap: wrap; /* Allow the header to wrap on smaller screens */
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.header {
+    color: white;
+    font-size: 28px;
+    margin: 0;
+}
+
+.Leading {
+    color: white;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Header Section End */
+
+/* Style for the links (buttons) */
+.links {
+    display: flex;
+    justify-content: center;  
+    gap: 20px;  
+    position: relative;  /* Change to relative positioning */
+    margin-top: 20px;  /* Add some margin to push it below the header */
+    z-index: 20;  
+}
+
+.links a {
+    text-decoration: none;
+    color: #fff;  
+    background-color: #493974;  
+    padding: 10px 20px;  
+    border-radius: 5px;  
+    font-weight: bold;
+}
+
+.links a:hover {
+    background-color: #281756;  
+}
+
+.CardContainer { 
+    flex-direction: column;
+}
+
+/* End Buttons */
+
+.container-P, .container-P1 {
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 5px;
+    color: white;
+    position: relative;
+    border: 3px solid wheat; /* Border color and thickness */
+    padding: 15px; /* Padding inside the box */
+    margin: 20px; /* Margin around the box */
+    width: 80%; /* Width of the box, adjust as needed */
+    height: 200px; /* Height of the box */
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: hidden; /* Hides horizontal scrolling */
+    background-color: #281756; /* Optional background color */
+    left: 10%;
+}
+
+.Apply { 
+    background-color: #281756;
+    position: relative;
+    text-align: center;
+    margin: 20px auto;
+    color: white;
+    text-decoration: none;
+    border: solid 2px white;
+    height: 50px;
+    width: 160px;
+    display: inline-block;
+    line-height: 50px;
+}
+
+.Apply:hover {
+    box-sizing: border-box;
+}
+
+/* Footer Section */
+footer {
+    background-color: #281756;
+    color: white;
+    font-size: 16px;
+    flex-wrap: wrap; /* Allow the header to wrap on smaller screens */
+    position: relative;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.footer-center {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 50px;
+    line-height: 50px;
+    color: white;
+}
+
+.footer-center .Copy { 
+    color: rgb(139, 138, 138);
+}
+
+/* Media Queries */
+
+/* Mobile Screens */
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 5%;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header {
+        font-size: 24px;
+    }
+
+    .container-P, .container-P1 {
+        width: 90%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .Apply {
+        width: 140px;
+        margin-top: 20px;
+    }
+}
+
+/* Tablet Screens */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 5%;
+    }
+
+    .nav-links a {
+        font-size: 17px;
+    }
+
+    .logo {
+        width: 110px;
+        height: 110px;
+    }
+
+    .header {
+        font-size: 26px;
+    }
+
+    .container-P, .container-P1 {
+        width: 85%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .Apply {
+        width: 150px;
+    }
+}
+
+/* Desktop Screens */
+@media (min-width: 1025px) {
+    .nav-links {
+        gap: 10%;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .header {
+        font-size: 28px;
+    }
+
+    .container-P, .container-P1 {
+        width: 80%;
+    }
+
+    .footer-container {
+        flex-direction: row;
+    }
+
+    .Apply {
+        width: 160px;
+    }
+}

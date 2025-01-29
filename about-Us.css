@@ -1,0 +1,263 @@
+/* General Styles */
+body { 
+    background-color: #b5a8db;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+/* Header Section */
+header {
+    width: 100%;
+    background-color: #281756;
+}
+
+.Container1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.header {
+    color: white;
+    font-size: 3vw; /* Adjust font size based on viewport width */
+    margin: 0;
+}
+
+.Leading {
+    color: white;
+    font-size: 1.5vw; /* Adjust font size based on viewport width */
+    margin-top: 5px;
+}
+
+/* Style for the links (buttons) */
+.links {
+    display: flex;
+    justify-content: center;  
+    gap: 20px;  
+    position: relative;  /* Change to relative positioning */
+    margin-top: 20px;  /* Add some margin to push it below the header */
+    z-index: 20;  
+}
+
+.links a {
+    text-decoration: none;
+    color: #fff;  
+    background-color: #493974;  
+    padding: 10px 20px;  
+    border-radius: 5px;  
+    font-weight: bold;
+}
+
+.links a:hover {
+    background-color: #281756;  
+}
+
+/* Slider Section */
+.slider { 
+    width: 100%;
+    height: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.item {
+    color: white;
+    width: 22vw;  /* Use viewport width for responsiveness */
+    height: 320px;
+    text-align: justify;
+    background-color: #281756;
+    border-radius: 15px;
+    padding: 25px;
+    position: absolute;
+    transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease, width 0.5s ease, height 0.5s ease;
+    opacity: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.ITitle {
+    font-size: large;
+}
+
+/* Images */
+.image-container {
+    width: 100%; /* Ensure the container takes full width */
+    height: 100%;
+}
+
+.Principal {
+    width: 100%; /* Make the image width 100% of the container */
+    height: 100%; /* Adjust height to be responsive */
+    object-fit: cover;
+    overflow: visible;
+}
+
+/* Style for the expanded box */
+.item.expanded {
+    width: 60vw;  /* Use viewport width for more flexibility */
+    height: 400px;
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease, width 0.5s ease, height 0.5s ease;
+}
+
+.item.expanded {
+    z-index: 100;
+}
+
+/* Scrollable content area */
+.item .slide-paragraph {
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Buttons */
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2vw; /* Font size based on viewport width */
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 10;
+}
+
+#prev {
+    left: 20px;
+}
+
+#next {
+    right: 20px;
+}
+
+#next:hover, #prev:hover {
+    background-color: #281756;
+}
+
+/* Footer Section */
+footer {
+    background-color: #281756;
+    color: white;
+    font-size: 1.5vw;  /* Adjust font size for footer */
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.footer-center {
+    text-align: center;
+    font-size: 1vw;  /* Adjust font size for footer */
+    margin-top: 50px;
+    line-height: 50px;
+    color: white;
+}
+
+/* Medium screens (Tablets) */
+@media (max-width: 1024px) {
+    .Container1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header {
+        font-size: 5vw;
+    }
+
+    .slider {
+        height: 250px;
+    }
+
+    .item {
+        width: 40vw;
+        height: 250px;
+    }
+
+    #prev, #next {
+        font-size: 5vw;
+        padding: 8px 12px;
+    }
+}
+
+/* Large screens (PCs/Laptops) */
+@media (min-width: 1025px) {
+    .Container1 {
+        justify-content: flex-start;
+        padding: 15px 20px;
+    }
+
+    .header {
+        font-size: 3vw;
+    }
+
+    .Leading {
+        font-size: 1.5vw;
+    }
+
+    .slider {
+        height: 370px;
+    }
+
+    .item {
+        width: 22vw;
+        height: 320px;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-center {
+        font-size: 1vw;
+    }
+}

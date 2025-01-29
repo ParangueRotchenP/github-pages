@@ -1,0 +1,365 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: #281756;
+    padding-top: 60px; /* Make sure the header doesn't overlap with the content */
+}
+
+header {
+    position: relative;
+    z-index: 10; /* Ensure the header is above everything else */
+}
+
+#logo { 
+    position: relative;
+    width: 15%;
+    height: 15%;
+    margin-left: 10%; /* Centers the logo */
+    display: block;
+    z-index: 5; /* Ensure logo is visible, below header */
+}
+
+.Letters { 
+    color: white;
+    position: absolute;
+    font-size: xx-large;
+    left: 50%; /* Centered */
+    top: 110px;
+    transform: translateX(-50%); /* Centered horizontally */
+}
+
+.LogIn { 
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+}
+
+.LogIn .Holder { 
+    border-radius: 10px;
+    height: 25px;
+    width: 200px;
+}
+
+.LogIn p { 
+    position: relative;
+}
+
+.LogIn a {
+    color: rgb(255, 255, 255);
+    background-color: #281756;
+    position: absolute;
+    text-decoration: none;
+    border: solid wheat;
+    border-radius: 5px;
+    padding: 0 25px 0 25px;
+    margin-top: 50px;
+    margin-left: -80px;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.LogIn a:hover { 
+    color: black;
+    background-color: white;
+}
+
+
+.maincontainer { 
+    position: relative;
+    width: 250px;
+    height: 320px;
+    margin: 0 auto; /* Centered */
+}
+
+.Requirements { 
+    position: absolute;
+    color: white;
+    top: 95%;
+    left: 50%; /* Centered */
+    transform: translateX(-50%); /* Centered horizontally */
+    font-size: xx-large;
+}
+
+.thecard { 
+    position: absolute;
+    top: 150%;
+    left: 50%; /* Centered */
+    transform: translateX(-50%); /* Centered horizontally */
+    width: 120%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition:  all 0.5s ease;
+    text-align: center;
+    z-index: 1; /* Adjust stacking order for the flipping cards */
+}
+
+.thecard:hover { 
+    transform: rotateY(180deg);
+}
+
+.thefront { 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url(images/LOGO.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.theback { 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url(images/Blur-Logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: large;
+    transform: rotateY(180deg);
+}
+
+.active { 
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1440px) { 
+    #logo {
+        width: 13%;
+    }
+
+    .Letters {
+        font-size: large;
+    }
+
+    .LogIn {
+        font-size: large;
+    }
+
+    .maincontainer {
+        width: 240px;
+        height: 310px;
+    }
+
+    .Requirements {
+        font-size: xx-large;
+    }
+
+    .thecard {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 1200px) { 
+    #logo {
+        width: 12%;
+    }
+
+    .Letters {
+        font-size: large;
+    }
+
+    .LogIn {
+        font-size: large;
+    }
+
+    .maincontainer {
+        width: 230px;
+        height: 300px;
+    }
+
+    .Requirements {
+        left: 50%;
+    }
+
+    .thecard {
+        top: 100%;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 1024px) { 
+    #logo {
+        width: 10%;
+    }
+
+    .Letters {
+        font-size: medium;
+    }
+
+    .LogIn {
+        font-size: medium;
+    }
+
+    .maincontainer {
+        width: 200px;
+        height: 270px;
+    }
+
+    .Requirements {
+        left: 50%;
+        font-size: medium;
+    }
+
+    .thecard {
+        width: 100%;
+        top: 110%;
+    }
+}
+
+@media (max-width: 768px) { 
+    #logo {
+        width: 8%;
+    }
+
+    .Letters {
+        font-size: medium;
+    }
+
+    .LogIn {
+        font-size: large;
+        text-align: left;
+    }
+
+    .maincontainer {
+        width: 200px;
+        height: 250px;
+    }
+
+    .Requirements {
+        left: 50%;
+    }
+
+    .thecard {
+        width: 100%;
+        top: 120%;
+    }
+}
+
+@media (max-width: 480px) { 
+    #logo {
+        width: 15%;
+    }
+
+    .Letters {
+        font-size: small;
+        top: 30px; 
+    }
+
+    .LogIn {
+        font-size: medium;
+        text-align: center;
+    }
+
+    .LogIn .Holder {
+        width: 150px;
+    }
+
+    .maincontainer {
+        width: 180px;
+        height: 220px;
+    }
+
+    .Requirements {
+        left: 50%;
+    }
+
+    .thecard {
+        width: 100%;
+        top: 130%;
+    }
+
+    .Link {
+        font-size: large;
+        top: 75%;
+    }
+}
+
+/* For Very Small Screens */
+@media (max-width: 360px) { 
+    #logo {
+        width: 20%;
+    }
+
+    .Letters {
+        font-size: small;
+    }
+
+    .LogIn {
+        font-size: small;
+    }
+
+    .LogIn .Holder {
+        width: 140px;
+    }
+
+    .maincontainer {
+        width: 160px;
+        height: 200px;
+    }
+
+    .Requirements {
+        left: 50%;
+        font-size: large;
+    }
+
+    .thecard {
+        top: 140%;
+        width: 100%;
+    }
+
+    .Link {
+        font-size: medium;
+    }
+}
+
+@media (max-width: 320px) { 
+    #logo {
+        width: 25%;
+    }
+
+    .Letters {
+        font-size: smaller;
+    }
+
+    .LogIn {
+        font-size: small;
+        text-align: center;
+    }
+
+    .LogIn .Holder {
+        width: 130px;
+    }
+
+    .maincontainer {
+        width: 150px;
+        height: 180px;
+    }
+
+    .Requirements {
+        left: 50%;
+        font-size: large;
+    }
+
+    .thecard {
+        top: 150%;
+        width: 100%;
+    }
+
+    .Link {
+        font-size: small;
+    }
+}
